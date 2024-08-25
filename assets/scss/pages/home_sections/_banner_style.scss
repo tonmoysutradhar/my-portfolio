@@ -3,6 +3,22 @@
   justify-content: space-between;
   align-items: center;
   margin: 80px 0;
+  position: relative;
+
+  .bg-hi {
+    position: absolute;
+    left: 45%;
+    top: 38%;
+    color: var(--color2);
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color2);
+    font-family: "Russo One";
+    font-size: 370px;
+    animation: zoomin_out 3s linear infinite;
+    opacity: .4;
+    z-index: -1;
+  }
 }
 .banner-text {
   max-width: 636px;
@@ -35,7 +51,7 @@
       font-size: 15px;
       padding: 15px 35px;
       border-radius: 50px;
-      color: var(--color3);
+      color: var(--color2);
       background-color: var(--white);
       border: 1px solid var(--color2);
       span {
@@ -57,35 +73,27 @@
   }
 }
 
-
 .banner-img {
-  margin-right: 100px;
+  margin-right: 90px;
   img {
     max-width: 430px;
     border-radius: 32px;
     transform: rotate(6deg);
+    transition-duration: 0.5s;
     &:hover {
-      transform: rotate(8deg);
+      transform: rotate(0deg);
     }
   }
 }
 
-.happy-clients {
-  display: flex;
-  gap: 30px;
-  .clients {
-    display: flex;
-    gap: 15px;
-    width: 300px;
-    align-items: center;
-    color: var(--color2);
-    h4 {
-      font-size: 64px;
-      font-weight: var(--font-weight2);
-    }
-    p {
-      font-size: 16px;
-      line-height: 24px;
-    }
+@keyframes zoomin_out {
+  0%{
+      transform: scale(.95) translate(-50%, -50%);
+  }
+  50%{
+      transform: scale(1) translate(-50%, -50%);
+  }
+  100%{
+      transform: scale(.95) translate(-50%, -50%);
   }
 }
