@@ -76,7 +76,8 @@ body {
 
 header,
 .services,
-.recent_works {
+.recent_works,
+.experience_container {
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -405,6 +406,72 @@ hr {
 }
 .recent_works .works_container .works_content:hover .works_icon {
   transform: rotate(315deg);
+  transition-duration: 0.5s;
+}
+
+.experience_education {
+  background-color: #f6f3fc;
+  padding: 120px 0;
+}
+
+.experience_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.experience_container .experience_content {
+  display: grid;
+  gap: 45px;
+}
+.experience_container .experience_content .experience_heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(to right, var(--color2) 0%, var(--color1) 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: var(--font-weight2);
+  font-size: 45px;
+}
+.experience_container .experience_content .experience_content_box {
+  display: grid;
+  gap: 30px;
+}
+.experience_container .experience_content .experience_content_box .experience_box {
+  background-color: var(--white);
+  padding: 20px 30px;
+  width: 75%;
+  border-radius: 16px;
+}
+.experience_container .experience_content .experience_content_box .experience_box h4 {
+  font-size: 20px;
+  font-weight: var(--font-weight2);
+  color: var(--color2);
+}
+.experience_container .experience_content .experience_content_box .experience_box h3 {
+  font-size: 25px;
+  font-weight: var(--font-weight2);
+  color: var(--color1);
+  margin: 8px 0;
+}
+.experience_container .experience_content .experience_content_box .experience_box p {
+  font-size: 16px;
+  color: #140c1c;
+}
+.experience_container .experience_content .experience_content_box .experience_box:hover {
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 100%);
+  transition-duration: 0.5s;
+}
+.experience_container .experience_content .experience_content_box .experience_box:hover h4 {
+  color: var(--white);
+  transition-duration: 0.5s;
+}
+.experience_container .experience_content .experience_content_box .experience_box:hover h3 {
+  color: var(--white);
+  transition-duration: 0.5s;
+}
+.experience_container .experience_content .experience_content_box .experience_box:hover p {
+  color: var(--white);
   transition-duration: 0.5s;
 }
 
