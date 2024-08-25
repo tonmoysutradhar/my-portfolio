@@ -77,7 +77,8 @@ body {
 header,
 .services,
 .recent_works,
-.experience_container {
+.experience_container,
+.my_skills {
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -473,6 +474,69 @@ hr {
 .experience_container .experience_content .experience_content_box .experience_box:hover p {
   color: var(--white);
   transition-duration: 0.5s;
+}
+
+.my_skills {
+  padding: 120px 0;
+}
+.my_skills .skill_title {
+  text-align: center;
+  font-size: 45px;
+  background: linear-gradient(to right, var(--color2) 0%, var(--color1) 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: var(--font-weight2);
+}
+.my_skills .skill_pg {
+  text-align: center;
+  color: var(--color3);
+  font-size: 16px;
+  margin: 20px 0 50px 0;
+  line-height: 1.4;
+}
+.my_skills .card_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.my_skills .card_box .skill_card {
+  display: grid;
+  gap: 15px;
+  text-align: center;
+}
+.my_skills .card_box .skill_card .skill_box {
+  background-color: #f6f3fc;
+  border-radius: 16px;
+  padding: 40px 60px 30px 60px;
+  text-align: center;
+}
+.my_skills .card_box .skill_card .skill_box img {
+  max-width: 60px;
+  margin-bottom: 30px;
+  filter: grayscale(90%);
+}
+.my_skills .card_box .skill_card .skill_box .skill_par {
+  font-size: 20px;
+  font-weight: var(--font-weight2);
+  color: rgb(116, 119, 121);
+}
+.my_skills .card_box .skill_card .skill_box:hover {
+  background-color: var(--color1);
+  transition-duration: 0.5s;
+}
+.my_skills .card_box .skill_card .skill_box:hover img {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+  transition: 0.3s;
+}
+.my_skills .card_box .skill_card .skill_box:hover .skill_par {
+  color: var(--color2);
+  transition: 0.3s;
+}
+.my_skills .card_box .skill_name {
+  font-size: 16px;
+  color: var(--color2);
 }
 
 /*# sourceMappingURL=app.css.map */
