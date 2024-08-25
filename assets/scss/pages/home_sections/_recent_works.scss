@@ -1,0 +1,111 @@
+.recent_works {
+  padding: 120px 0 90px 0;
+
+  .works_title {
+    text-align: center;
+    font-size: 45px;
+    background: linear-gradient(to right, var(--color2) 0%, var(--color1) 100%);
+    background-clip: text;
+    color: transparent;
+    font-weight: var(--font-weight2);
+  }
+  .works_menu {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+
+    ul {
+      display: flex;
+      background-color: #f6f3fc;
+      padding: 6px 8px;
+      border-radius: 25px;
+      li {
+        a {
+          text-decoration: none;
+          font-size: 15px;
+          padding: 12px 25px;
+          color: var(--color2);
+        }
+      }
+    }
+  }
+  .works_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    .works_content {
+      position: relative;
+      padding: 36px 36px 0 36px;
+      background-color: black;
+      border-radius: 12px;
+
+      .works_img {
+        img {
+          width: 100%;
+        }
+      }
+      .works_pg_content {
+        z-index: -1;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 82%;
+        padding: 30px 20px;
+        border-radius: 16px;
+        background: linear-gradient(
+          90deg,
+          var(--color2) 0%,
+          var(--color1) 100%
+        );
+        bottom: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        .works_pg {
+          h3 {
+            font-size: 30px;
+            color: var(--white);
+            font-weight: var(--font-weight2);
+            margin-bottom: 15px;
+          }
+          p {
+            font-size: 16px;
+            color: var(--white);
+          }
+        }
+        .works_icon {
+          font-size: 30px;
+          color: var(--white);
+          transform: rotate(45deg);
+        }
+
+      }
+      &:hover {
+        .works_pg_content {
+          z-index: 2;
+          bottom: 5%;
+          transition-duration: 0.5s;
+          cursor: pointer;
+        }
+        .works_icon {
+          transform: rotate(315deg);
+          transition-duration: 0.5s;
+        }
+      }
+    }
+  }
+  
+}
+
+
+// .works_container:hover {
+//   cursor: pointer;
+//   .works_pg_content {
+//     visibility: visible;
+//   }
+//   .works_icon {
+//     transform: rotate(-45deg);
+//     transition-duration: 0.4s;
+//   }
+// }

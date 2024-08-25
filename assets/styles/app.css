@@ -75,7 +75,8 @@ body {
 }
 
 header,
-.services {
+.services,
+.recent_works {
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -323,6 +324,88 @@ header,
 
 hr {
   margin: 0;
+}
+
+.recent_works {
+  padding: 120px 0 90px 0;
+}
+.recent_works .works_title {
+  text-align: center;
+  font-size: 45px;
+  background: linear-gradient(to right, var(--color2) 0%, var(--color1) 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: var(--font-weight2);
+}
+.recent_works .works_menu {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.recent_works .works_menu ul {
+  display: flex;
+  background-color: #f6f3fc;
+  padding: 6px 8px;
+  border-radius: 25px;
+}
+.recent_works .works_menu ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  padding: 12px 25px;
+  color: var(--color2);
+}
+.recent_works .works_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.recent_works .works_container .works_content {
+  position: relative;
+  padding: 36px 36px 0 36px;
+  background-color: black;
+  border-radius: 12px;
+}
+.recent_works .works_container .works_content .works_img img {
+  width: 100%;
+}
+.recent_works .works_container .works_content .works_pg_content {
+  z-index: -1;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+  padding: 30px 20px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 100%);
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.recent_works .works_container .works_content .works_pg_content .works_pg h3 {
+  font-size: 30px;
+  color: var(--white);
+  font-weight: var(--font-weight2);
+  margin-bottom: 15px;
+}
+.recent_works .works_container .works_content .works_pg_content .works_pg p {
+  font-size: 16px;
+  color: var(--white);
+}
+.recent_works .works_container .works_content .works_pg_content .works_icon {
+  font-size: 30px;
+  color: var(--white);
+  transform: rotate(45deg);
+}
+.recent_works .works_container .works_content:hover .works_pg_content {
+  z-index: 2;
+  bottom: 5%;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.recent_works .works_container .works_content:hover .works_icon {
+  transform: rotate(315deg);
+  transition-duration: 0.5s;
 }
 
 /*# sourceMappingURL=app.css.map */
