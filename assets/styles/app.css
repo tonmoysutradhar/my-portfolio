@@ -81,7 +81,8 @@ header,
 .my_skills,
 .recent_blogs,
 .work_together,
-.footer_content {
+.footer_content,
+.client_stories {
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -544,9 +545,61 @@ hr {
   color: var(--color2);
 }
 
-.clinet_stories {
+.client_stories_section {
   background-color: #f6f3fc;
   padding: 120px 0;
+}
+
+.client_stories {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.client_stories .client_left .client_title {
+  font-size: 45px;
+  background: linear-gradient(to right, var(--color2) 0%, var(--color1) 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: var(--font-weight2);
+}
+.client_stories .client_left .client_pg {
+  color: var(--color3);
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 16px;
+}
+.client_stories .client_right .client_cards {
+  width: 250px;
+  padding: 25px;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+.client_stories .client_right .client_cards .client_profile {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.client_stories .client_right .client_cards .client_profile .right_profile img {
+  border-bottom-left-radius: 125px;
+}
+.client_stories .client_right .client_cards .item_icon {
+  display: flex;
+  font-size: 30px;
+  color: var(--color2);
+}
+.client_stories .client_right .client_cards .client_information {
+  font-size: 16px;
+  color: var(--color3);
+  margin: 25px 0 50px 0;
+}
+.client_stories .client_right .client_cards .client_name {
+  font-size: 18px;
+  font-weight: var(--font-weight2);
+  color: var(--color1);
+  margin-bottom: 5px;
+}
+.client_stories .client_right .client_cards .client_designation {
+  font-size: 14px;
+  color: var(--color3);
 }
 
 .recent_blogs {

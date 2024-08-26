@@ -3,6 +3,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./assets/plugins/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/plugins/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./assets/styles/app.css" />
     <!-- Font awesome  -->
     <script
@@ -173,19 +176,19 @@
         </div>
       </section>
       <!-- My Recent Works -->
-      <section class="recent_works">
+      <section class="recent_works ">
         <h2 class="works_title">My Recent Works</h2>
         <div class="works_menu">
           <ul>
-            <li><a href="#">All</a></li>
-            <li><a href="#">Apps</a></li>
-            <li><a href="#">Branding</a></li>
-            <li><a href="#">UX/UI</a></li>
+            <li><a class="fltr-controls" data-filter="all" href="javascript:void();">All</a></li>
+            <li><a class="fltr-controls" data-filter="apps" href="javascript:void();">Apps</a></li>
+            <li><a class="fltr-controls" data-filter="branding" href="javascript:void();">Branding</a></li>
+            <li><a class="fltr-controls" data-filter="ux" href="javascript:void();">UX/UI</a></li>
           </ul>
         </div>
-        <!-- img-1  -->
-        <div class="works_container">
-          <div class="works_content">
+        <div class="works_container filter-container">
+          <!-- img-1  -->
+          <div class="works_content filtr-item" data-category="all" data-sort="value">
             <div class="works_img">
               <img src="./assets/images/portfolio-1.webp" alt="" />
             </div>
@@ -200,7 +203,7 @@
             </div>
           </div>
           <!-- img-2  -->
-          <div class="works_content">
+          <div class="works_content filtr-item" data-category="branding" data-sort="value">
             <div class="works_img">
               <img src="./assets/images/portfolio-2.webp" alt="" />
             </div>
@@ -215,7 +218,7 @@
             </div>
           </div>
           <!-- img-3  -->
-          <div class="works_content">
+          <div class="works_content filtr-item" data-category="all, ux" data-sort="value">
             <div class="works_img">
               <img src="./assets/images/portfolio-3.webp" alt="" />
             </div>
@@ -230,7 +233,7 @@
             </div>
           </div>
           <!-- img-4  -->
-          <div class="works_content">
+          <div class="works_content filtr-item" data-category="apps" data-sort="value">
             <div class="works_img">
               <img src="./assets/images/portfolio-4.webp" alt="" />
             </div>
@@ -361,7 +364,98 @@
         </div>
       </section>
       <!-- My Client's Stories -->
-      <section class="clinet_stories"></section>
+      <section class="client_stories_section">
+        <div class="client_stories">
+          <div class="client_left">
+            <h2 class="client_title">My Client's Stories</h2>
+            <p class="client_pg">Empowering people in new a digital journey with my super services</p>
+          </div>
+          <div class="client_right owl-carousel owl-theme">
+            <!-- card 1 -->
+            <div class="client_cards">
+              <div class="client_profile">
+                <div class="left_profile">
+                  <img src="./assets/images/1-dark.webp" alt="">
+                </div>
+                <div class="right_profile">
+                  <img src="./assets/images/testi-1.webp" alt="">
+                </div>
+              </div>
+              <div class="item_icon">
+                <div class="left_icon"><i class="fa-solid fa-caret-left"></i></div>
+                <div class="right_icon"><i class="fa-solid fa-caret-right"></i></div>
+              </div>
+              <p class="client_information">
+                “Taylor is a professional Designer he really helps my business by providing value to my business. 
+              </p>
+              <h3 class="client_name">Tim Bailey</h3>
+              <p class="client_designation">SEO Specialist, Theme Junction</p>
+            </div>
+            <!-- card 2 -->
+            <div class="client_cards">
+              <div class="client_profile">
+                <div class="left_profile">
+                  <img src="./assets/images/2-dark.webp" alt="">
+                </div>
+                <div class="right_profile">
+                  <img src="./assets/images/testi-2.webp" alt="">
+                </div>
+              </div>
+              <div class="item_icon">
+                <div class="left_icon"><i class="fa-solid fa-caret-left"></i></div>
+                <div class="right_icon"><i class="fa-solid fa-caret-right"></i></div>
+              </div>
+              <p class="client_information">
+                “Taylor is a professional Designer he really helps my business by providing value to my business. 
+              </p>
+              <h3 class="client_name">Tim Bailey</h3>
+              <p class="client_designation">SEO Specialist, Theme Junction</p>
+
+            </div>
+            <!-- card 3  -->
+            <div class="client_cards">
+              <div class="client_profile">
+                <div class="left_profile">
+                  <img src="./assets/images/1-dark.webp" alt="">
+                </div>
+                <div class="right_profile">
+                  <img src="./assets/images/testi-1.webp" alt="">
+                </div>
+              </div>
+              <div class="item_icon">
+                <div class="left_icon"><i class="fa-solid fa-caret-left"></i></div>
+                <div class="right_icon"><i class="fa-solid fa-caret-right"></i></div>
+              </div>
+              <p class="client_information">
+                “Taylor is a professional Designer he really helps my business by providing value to my business. 
+              </p>
+              <h3 class="client_name">Tim Bailey</h3>
+              <p class="client_designation">SEO Specialist, Theme Junction</p>
+            </div>
+            <!-- card 4  -->
+            <div class="client_cards">
+              <div class="client_profile">
+                <div class="left_profile">
+                  <img src="./assets/images/2-dark.webp" alt="">
+                </div>
+                <div class="right_profile">
+                  <img src="./assets/images/testi-2.webp" alt="">
+                </div>
+              </div>
+              <div class="item_icon">
+                <div class="left_icon"><i class="fa-solid fa-caret-left"></i></div>
+                <div class="right_icon"><i class="fa-solid fa-caret-right"></i></div>
+              </div>
+              <p class="client_information">
+                “Taylor is a professional Designer he really helps my business by providing value to my business. 
+              </p>
+              <h3 class="client_name">Tim Bailey</h3>
+              <p class="client_designation">SEO Specialist, Theme Junction</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
       <!-- Recent Blogs -->
       <section class="recent_blogs">
         <h2 class="blogs_title">Recent Blogs</h2>
@@ -525,8 +619,20 @@
       </div>
     </footer>
 
+    <div class="owl-carousel">
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script src="./assets/plugins/countMe.min.js"></script>
+    <!-- <script src="./assets/plugins/filterizr.min.js"></script> -->
+     <script src="./assets/plugins/owlcarousel/owl.carousel.min.js"></script>
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
