@@ -1,0 +1,116 @@
+.recent_blogs {
+  padding: 120px 0;
+  .blogs_title {
+    text-align: center;
+    font-size: 45px;
+    background: linear-gradient(to right, var(--color2) 0%, var(--color1) 100%);
+    background-clip: text;
+    color: transparent;
+    font-weight: var(--font-weight2);
+  }
+  .blogs_pg {
+    text-align: center;
+    color: var(--color3);
+    font-size: 16px;
+    margin: 20px 0 50px 0;
+    line-height: 1.4;
+  }
+
+  .blogs_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 10px;
+
+    .blogs_content {
+      position: relative;
+      background-color: black;
+      border-radius: 12px;
+
+      .blogs_img {
+        overflow: hidden;
+        border-radius: 12px;
+        img {
+          width: 100%;
+          transition-property: transform;
+          transition: 0.5s ease-in-out;
+        }
+      }
+      .top_sass {
+        position: absolute;
+        padding: 10px 15px;
+        border-radius: 16px;
+        background: linear-gradient(
+          90deg,
+          var(--color2) 0%,
+          var(--color1) 100%
+        );
+        top: 4%;
+        left: 4%;
+        a {
+          color: var(--white);
+          text-decoration: none;
+        }
+      }
+      .blogs_pg_content {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 82%;
+        padding: 20px 15px;
+        border-radius: 16px;
+        background-color: var(--white);
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        .blogs_bottom {
+          .comments {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 10px;
+            p {
+              font-size: 14px;
+              color: var(--color2);
+              span {
+                margin-right: 10px;
+              }
+            }
+          }
+          h3 {
+            font-size: 22px;
+            color: var(--color1);
+            font-weight: var(--font-weight2);
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        .blogs_img {
+          overflow: hidden;
+          border-radius: 12px;
+          img {
+            transform: scale(1.2);
+          }
+        }
+        .blogs_pg_content {
+          background: linear-gradient(
+            90deg,
+            var(--color2) 0%,
+            var(--color1) 100%
+          );
+          .blogs_bottom {
+            .comments {
+              p {
+                color: var(--white);
+              }
+            }
+            h3 {
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+}

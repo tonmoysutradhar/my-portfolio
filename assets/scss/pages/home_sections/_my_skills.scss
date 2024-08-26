@@ -29,25 +29,27 @@
         border-radius: 16px;
         padding: 40px 60px 30px 60px;
         text-align: center;
+        transition-property: background-color;
+        transition: 0.5s ease-in-out;
         img {
+          transition-property: transform;
+          transition: 0.5s ease-in-out;
           max-width: 60px;
           margin-bottom: 30px;
           filter: grayscale(90%);
         }
-        .skill_par{
+        .skill_par {
           font-size: 20px;
           font-weight: var(--font-weight2);
           color: rgb(116, 119, 121);
         }
         &:hover {
           background-color: var(--color1);
-          transition-duration: 0.5s;
           img {
             transform: scale(1.2);
             filter: grayscale(0%);
-            transition: 0.3s;
           }
-          .skill_par{
+          .skill_par {
             color: var(--color2);
             transition: 0.3s;
           }

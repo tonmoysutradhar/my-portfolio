@@ -78,7 +78,8 @@ header,
 .services,
 .recent_works,
 .experience_container,
-.my_skills {
+.my_skills,
+.recent_blogs {
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -510,8 +511,12 @@ hr {
   border-radius: 16px;
   padding: 40px 60px 30px 60px;
   text-align: center;
+  transition-property: background-color;
+  transition: 0.5s ease-in-out;
 }
 .my_skills .card_box .skill_card .skill_box img {
+  transition-property: transform;
+  transition: 0.5s ease-in-out;
   max-width: 60px;
   margin-bottom: 30px;
   filter: grayscale(90%);
@@ -523,12 +528,10 @@ hr {
 }
 .my_skills .card_box .skill_card .skill_box:hover {
   background-color: var(--color1);
-  transition-duration: 0.5s;
 }
 .my_skills .card_box .skill_card .skill_box:hover img {
   transform: scale(1.2);
   filter: grayscale(0%);
-  transition: 0.3s;
 }
 .my_skills .card_box .skill_card .skill_box:hover .skill_par {
   color: var(--color2);
@@ -537,6 +540,111 @@ hr {
 .my_skills .card_box .skill_name {
   font-size: 16px;
   color: var(--color2);
+}
+
+.clinet_stories {
+  background-color: #f6f3fc;
+  padding: 120px 0;
+}
+
+.recent_blogs {
+  padding: 120px 0;
+}
+.recent_blogs .blogs_title {
+  text-align: center;
+  font-size: 45px;
+  background: linear-gradient(to right, var(--color2) 0%, var(--color1) 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: var(--font-weight2);
+}
+.recent_blogs .blogs_pg {
+  text-align: center;
+  color: var(--color3);
+  font-size: 16px;
+  margin: 20px 0 50px 0;
+  line-height: 1.4;
+}
+.recent_blogs .blogs_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 10px;
+}
+.recent_blogs .blogs_container .blogs_content {
+  position: relative;
+  background-color: black;
+  border-radius: 12px;
+}
+.recent_blogs .blogs_container .blogs_content .blogs_img {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.recent_blogs .blogs_container .blogs_content .blogs_img img {
+  width: 100%;
+  transition-property: transform;
+  transition: 0.5s ease-in-out;
+}
+.recent_blogs .blogs_container .blogs_content .top_sass {
+  position: absolute;
+  padding: 10px 15px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 100%);
+  top: 4%;
+  left: 4%;
+}
+.recent_blogs .blogs_container .blogs_content .top_sass a {
+  color: var(--white);
+  text-decoration: none;
+}
+.recent_blogs .blogs_container .blogs_content .blogs_pg_content {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+  padding: 20px 15px;
+  border-radius: 16px;
+  background-color: var(--white);
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.recent_blogs .blogs_container .blogs_content .blogs_pg_content .blogs_bottom .comments {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.recent_blogs .blogs_container .blogs_content .blogs_pg_content .blogs_bottom .comments p {
+  font-size: 14px;
+  color: var(--color2);
+}
+.recent_blogs .blogs_container .blogs_content .blogs_pg_content .blogs_bottom .comments p span {
+  margin-right: 10px;
+}
+.recent_blogs .blogs_container .blogs_content .blogs_pg_content .blogs_bottom h3 {
+  font-size: 22px;
+  color: var(--color1);
+  font-weight: var(--font-weight2);
+}
+.recent_blogs .blogs_container .blogs_content:hover {
+  cursor: pointer;
+}
+.recent_blogs .blogs_container .blogs_content:hover .blogs_img {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.recent_blogs .blogs_container .blogs_content:hover .blogs_img img {
+  transform: scale(1.2);
+}
+.recent_blogs .blogs_container .blogs_content:hover .blogs_pg_content {
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 100%);
+}
+.recent_blogs .blogs_container .blogs_content:hover .blogs_pg_content .blogs_bottom .comments p {
+  color: var(--white);
+}
+.recent_blogs .blogs_container .blogs_content:hover .blogs_pg_content .blogs_bottom h3 {
+  color: var(--white);
 }
 
 /*# sourceMappingURL=app.css.map */
