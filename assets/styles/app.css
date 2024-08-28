@@ -190,9 +190,16 @@ header,
   color: var(--color2);
   background-color: var(--white);
   border: 1px solid var(--color2);
+  transition-property: background-color;
+  transition: 0.3s ease-in-out;
 }
 .banner-text .banner-icons button span {
   margin-left: 10px;
+}
+.banner-text .banner-icons button:hover {
+  background-color: var(--color2);
+  color: white;
+  cursor: pointer;
 }
 .banner-text .banner-icons .social-icons {
   display: flex;
@@ -200,10 +207,16 @@ header,
 }
 .banner-text .banner-icons .social-icons a {
   font-size: 16px;
-  padding: 8px;
+  padding: 10px;
   color: var(--color2);
   border: 1px solid var(--color2);
   border-radius: 50%;
+  transition-property: background-color;
+  transition: 0.3s ease-in-out;
+}
+.banner-text .banner-icons .social-icons a:hover {
+  background-color: var(--color2);
+  color: white;
 }
 
 .banner-img {
@@ -361,21 +374,22 @@ hr {
   color: var(--color2);
 }
 .recent_works .works_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  width: unset !important;
 }
 .recent_works .works_container .works_content {
   position: relative;
   padding: 36px 36px 0 36px;
   background-color: black;
   border-radius: 12px;
+  max-width: 40%;
+}
+.recent_works .works_container .works_content .works_img {
+  width: 100%;
 }
 .recent_works .works_container .works_content .works_img img {
   width: 100%;
 }
 .recent_works .works_container .works_content .works_pg_content {
-  z-index: -1;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -387,6 +401,7 @@ hr {
   bottom: 0%;
   left: 50%;
   transform: translateX(-50%);
+  visibility: hidden;
 }
 .recent_works .works_container .works_content .works_pg_content .works_pg h3 {
   font-size: 30px;
@@ -404,8 +419,8 @@ hr {
   transform: rotate(45deg);
 }
 .recent_works .works_container .works_content:hover .works_pg_content {
-  z-index: 2;
   bottom: 5%;
+  visibility: visible;
   transition-duration: 0.5s;
   cursor: pointer;
 }

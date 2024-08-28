@@ -30,23 +30,23 @@
     }
   }
   .works_container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    width: unset !important;
+    
 
     .works_content {
       position: relative;
       padding: 36px 36px 0 36px;
       background-color: black;
       border-radius: 12px;
+      max-width: 40%;
 
       .works_img {
+        width: 100%;
         img {
           width: 100%;
         }
       }
       .works_pg_content {
-        z-index: -1;
         position: absolute;
         display: flex;
         justify-content: space-between;
@@ -62,6 +62,7 @@
         bottom: 0%;
         left: 50%;
         transform: translateX(-50%);
+        visibility: hidden;
         .works_pg {
           h3 {
             font-size: 30px;
@@ -83,8 +84,8 @@
       }
       &:hover {
         .works_pg_content {
-          z-index: 2;
           bottom: 5%;
+          visibility: visible;
           transition-duration: 0.5s;
           cursor: pointer;
         }

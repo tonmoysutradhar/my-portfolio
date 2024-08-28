@@ -9,7 +9,10 @@ window.onload = () => {
 
   // Configure your options
   try {
-    new Filterizr(".filter-container", {});
+    new Filterizr(".filter-container", {
+      gutterPixels: 40,
+    });
+    
   } catch (error) {
     console.log(error);
   }
